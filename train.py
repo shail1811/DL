@@ -21,4 +21,3 @@ print("Threshold:")
 print(perceptron.threshold)
 print("Learning_Rate:")
 print(perceptron.learning_rate)
-//This Clearly shows weights& bias depends on Learning rate 
