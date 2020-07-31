@@ -1,0 +1,25 @@
+Here we need to check whether our dataset is linear or not
+
+This is how the Weights and Biases are updated according to the model
+
+Iteration No.0
+[0. 0. 0. 0. 0.]
+Iteration No.1
+[ 0. -1.  1.  1. -1.]
+Iteration No.2
+[ 1.  0.  2.  1. -1.]
+Iteration No.3
+[ 1. -1.  2.  2.  0.]
+Iteration No.4
+[ 0. -1.  2.  2. -1.]
+Iteration No.5
+[ 0. -1.  2.  2. -1.]
+
+Predicted Output by our Model for training inputs[0,1,1,1] = 1
+Expected Output was 1 as well
+
+Predicted Output by our Model for training inputs[1,0,0,1] = 1
+Expected Output was 0 as well
+
+AS WE ARE GETTING THE EXPECTED OUTPUT AND THE PREDICTED OUTPUT IDENTICAL 
+WE CAN SAY THAT OUR DATASET IS LINEAR
