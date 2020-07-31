@@ -1,9 +1,0 @@
-HOW THE MODEL ACTUALLY WORKS
-
-Here Threshold is the No.of time the FIRST FOR LOOP runs as it takes Threshold as inputs
-Initially the weights are 0 , 0 & bias is 0 as well
-For Example our initial inputs are [1,1],[0,1],[1,0],[0,0] and our labels are [1,0,0,0]
-Now using ZIP function the training inputs & lables are mapped into a single iterable object
-So using this two expressions the weights and bias is updated until the final weights are found which satisfies all training inputs
-self.weights[1:] = self.weights[1:] + self.learning_rate * (label - prediction) * inputs 
-self.weights[0] = self.weights[0] + self.learning_rate * (label - prediction)

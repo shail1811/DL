@@ -1,0 +1,120 @@
+HOW THE MODEL ACTUALLY WORKS
+
+Here Threshold is the No.of time the FIRST FOR LOOP runs as it takes Threshold as inputs
+Initially the weights are 0 , 0 & bias is 0 as well
+For Example our initial inputs are [1,1],[0,1],[1,0],[0,0] and our labels are [1,0,0,0]
+Now using ZIP function the training inputs & lables are mapped into a single iterable object
+So using this two expressions the weights and bias is updated until the final weights are found which satisfies all training inputs
+self.weights[1:] = self.weights[1:] + self.learning_rate * (label - prediction) * inputs 
+self.weights[0] = self.weights[0] + self.learning_rate * (label - prediction)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+IMPACT OF LEARNING RATE & THRESHOLD ON WEIGHTS AND BIAS
+    
+    Initial weights & bias = [ 0 , 0 , 0 ]
+
+    Training Inputs = [0,0],[0,1],[1,0],[1,1]
+    Labels = [0,0,0,1]
+    
+1)  When Threshold is 1 & Learning Rate is 10
+    Iteration No.0
+    [0. 0. 0.]
+    0
+    0
+    0
+    0
+    Weights & Bias were the same as initial weights but we dont have the desired results so we increase the threshold 
+2)  When Threshold is 2 & Learning Rate is 10
+    Iteration No.0
+    [0. 0. 0.]
+    Iteration No.1
+    [-10.   0.   0.]
+    0
+    0
+    0
+    0
+    Bias is changed here but weights are still the same but we dont have the desired results so we increase the threshold
+3)  When Threshold is 3 & Learning Rate is 10
+    Iteration No.0
+    [0. 0. 0.]
+    Iteration No.1
+    [-10.   0.   0.]
+    Iteration No.2
+    [-10.   0.  10.]
+    0
+    0
+    0
+    0
+    Weights and Bias both change here still we dont have the desired results so we increase the threshold 
+4)  When Threshold is 4 & Learning Rate is 10
+    Iteration No.0
+    [0. 0. 0.]
+    Iteration No.1
+    [-10.   0.   0.]
+    Iteration No.2
+    [-10.   0.  10.]
+    Iteration No.3
+    [-20.   0.  10.]
+    0
+    0
+    0
+    0
+    Here the Bias is changed and weights are still the same still we dont have the desired results so we increase the threshold
+5)  When Threshold is 5 & Learning Rate is 10
+    Iteration No.0
+    [0. 0. 0.]
+    Iteration No.1
+    [-10.   0.   0.]
+    Iteration No.2
+    [-10.   0.  10.]
+    Iteration No.3
+    [-20.   0.  10.]
+    Iteration No.4
+    [-20.  10.  10.]
+    0
+    0
+    0
+    1
+    Here we the Desired Results which we wanted but now the weights & bias should remain constant even after increasing the threshold so lets increase the threshold and check it     out
+6)  When Threshold is 6 & Learning Rate is 10
+    Iteration No.0
+    [0. 0. 0.]
+    Iteration No.1
+    [-10.   0.   0.]
+    Iteration No.2
+    [-10.   0.  10.]
+    Iteration No.3
+    [-20.   0.  10.]
+    Iteration No.4
+    [-20.  10.  10.]
+    Iteration No.5
+    [-20.  10.  20.]
+    0
+    0
+    0
+    1
+    Here we have the same results as we obtained when threshold was 6 still the weights and bias got changed so there might be some conditions then may have been not satisfied
+    Now even if I increase the Threshold The Weights & Bias going to remain same as above
+ 
+     SO FINAL WEIGHTS & BIASES ARE [-20 10 20]
+     AND THE RESULTS ARE 
+     0
+     0
+     0
+     1
+    AND WE CAN CONCULDE THAT BEFORE THRESHOLD SHOULD BE 6 TO GET OUR RESULTS AS CORRECT
+    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
+        
+    NOW LET US CHECK THE IMPACT OF LEARNING RATE ON WEIGHTS & BIASES
+
+    When the Learning rate is 10 the Final Weights are [-20.  10.  20.]
+
+    When the Learning rate is 5 the Final Weights are [-10.   5.  10.]
+
+    When the Learning rate is 1 the Final Weights are [-2.  1.  2.]
+    
+    THIS SHOWS THE VALUES OF WEIGHTS AND BIASES ARE SCALED ON THE BASIS OF THE LEARNING RATE
+    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
