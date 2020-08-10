@@ -1,1 +1,140 @@
+CHANGING THE NUMBER OF EPOCHS
 
+    W=-2  B=-2  ETA=1   EPOCH=1000
+    ERROR=0.034753566609737725
+    W=-2  B=-2  ETA=1   EPOCH=900
+    ERROR=0.034753566609737725
+    W=-2  B=-2  ETA=1   EPOCH=800
+    ERROR=0.034753566609737725
+    W=-2  B=-2  ETA=1   EPOCH=700
+    ERROR=0.034753566609737725
+    W=-2  B=-2  ETA=1   EPOCH=600
+    ERROR=0.03475356660967894
+    W=-2  B=-2  ETA=1   EPOCH=500
+    ERROR=0.03475356658469881
+    W=-2  B=-2  ETA=1   EPOCH=400
+    ERROR=0.034753555969135125
+    W=-2  B=-2  ETA=1   EPOCH=300
+    ERROR=0.03474904386328973
+    W=-2  B=-2  ETA=1   EPOCH=200
+    ERROR=0.03264793400662896
+    W=-2  B=-2  ETA=1   EPOCH=100
+    ERROR=0.412582501396922
+    W=-2  B=-2  ETA=1   EPOCH=5000
+    ERROR=0.034753566609737725
+_________________________________________________________________________________________________________________________________________________________________________________
+
+Here by seeing this iterations we conclude the following,
+        Here we randomly started with Epoch as 1000 and We get an ERROR=0.034753566609737725
+Now we keep on decreasing the No. of Epochs,
+        From Epoch 1000 to Epoch 700,
+                We get the same ERROR which is equal to 0.034753566609737725
+        Now we decrease the epochs to 600,
+                The error we get is 0.03475356660967894
+                Here we see error has increased which is clearly negligible
+        Now we again decrease the epochs to 500,
+                The error we get is 0.03475356658469881
+                Here we see error has increased which is clearly negligible
+        Now the process is repeated until epoch 200
+                We can see some small changes in the erroe
+        But now we decrease the No. of EPOCHS to 100
+                There is a sudden increase in the ERROR = 0.412582501396922
+                This Increase is not negligible
+Now to check the effect we increase the epochs to 5000
+                Still the error is same as we get whnrn epoch was between 1000 to 700
+
+THIS CLEARLY SHOWS THAT THE MINIMUM ERROR =  0.034753566609737725
+AFTER THAT 700 EVEN IF WE INCREASE OUR EPOCHS TO 10000 THE ERROR IS GONNA REMAIN SAME
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+Now Let's check the effect of ETA(Learning rate) on Error
+
+        W=-2  B=-2  ETA=1   EPOCH=1000
+        ERROR=0.034753566609737725
+        
+        W=-2  B=-2  ETA=2   EPOCH=1000
+        ERROR=0.034753566609737885
+        
+        W=-2  B=-2  ETA=5   EPOCH=1000
+        ERROR=0.03475356660973796
+        
+        W=-2  B=-2  ETA=10   EPOCH=1000
+        ERROR=0.03475356660973793
+       
+        W=-2  B=-2  ETA=20   EPOCH=1000
+        ERROR=0.03475356660973793
+        
+        W=-2  B=-2  ETA=30   EPOCH=1000
+        ERROR=0.03475356660973796
+       
+        W=-2  B=-2  ETA=40   EPOCH=1000
+        ERROR=0.32495765233857177
+        
+        W=-2  B=-2  ETA=100   EPOCH=1000
+        ERROR=0.32499947126444007
+        
+        W=-2  B=-2  ETA=1000   EPOCH=1000
+        ERROR=0.32500000000000007
+        
+        W=-2  B=-2  ETA=10000   EPOCH=1000
+        ERROR=0.32499983812873384
+_________________________________________________________________________________________________________________________________________________________________________________
+
+Let  us Conclude from the Following Observations,
+        From ETA=1 to ETA = 30
+        WE CAN SAY THAT ERROR CHANGES BUT THE CHANGE WE GET IS VERY NEGLIGIBLE 
+        But 
+        When we increase the ETA = 40 TO ETA = 10000
+        THE ERROR at 40 has a sudden increase 
+        But after that till 10000
+        THE ERROR remains the same with the slight changes which are negligible
+        
+_________________________________________________________________________________________________________________________________________________________________________________  
+Now Let us check the effect of Weights & Bias on Error
+        
+        W=-10  B=-10  ETA=1   EPOCH=1000
+        ERROR=0.4249999388196008
+        
+        W=-3  B=-3  ETA=1   EPOCH=1000
+        ERROR=0.4227029142527907
+        
+        W=-2  B=-2  ETA=1   EPOCH=1000
+        ERROR=0.034753566609737725
+        
+        W=-1  B=-1  ETA=1   EPOCH=1000
+        ERROR=0.06720783425220908
+        
+        W=0  B=0  ETA=1   EPOCH=1000
+        ERROR=0.1077231902158785
+        
+        W=1  B=1  ETA=1   EPOCH=1000
+        ERROR=0.15094860903332158
+        
+        W=2  B=2  ETA=1   EPOCH=1000
+        ERROR=0.2752481417730701
+       
+_________________________________________________________________________________________________________________________________________________________________________________ 
+
+NOW let's make a conclusion
+
+HERE when the Weights & Bias are 
+        W = -2 | B = -2
+        Then the Error = 0.034753566609737725
+        Now if I increase the Weights and Bias then the error keeps on increasing
+       
+        Now if We decrease the Weights and Bias then the error keeps on decreasing
+        W=-3  B=-3  
+        ERROR=0.4227029142527907
+        W=-10  B=-10  
+        ERROR=0.4249999388196008
+        
+        
+ FINAL CONCLUSION
+_________________________________________________________________________________________________________________________________________________________________________________ 
+
+THE MINIMUM ERROR WE GET WHEN WEIGHTS & BIAS ARE  -2 & -2
+THE MINIMUM ERROR WE GET WHEN ETA IS 1
+THE MINIMUM ERROR WE GET WHEN EPOCH IS 1000
+
+SO THE MINIMUM ERROR IS 0.034753566609737725
