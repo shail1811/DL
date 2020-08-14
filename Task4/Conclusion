@@ -17,3 +17,5 @@ Vanilla ---> Time Taken = 0.03191328048706055
 w,b,eta,max_epoch = -2,-2,1.0,75
 Momentum --> Time Taken = 0.04288434982299805
 Vanilla ---> Time Taken = 0.0468754768371582
+
+Here we clearly see that Momentum based Gradient Descent works faster than Vanilla Gradient Descent
