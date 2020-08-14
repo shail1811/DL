@@ -1,0 +1,19 @@
+w,b,eta,max_epoch = -2,-2,1.0,10
+Momentum --> Time Taken =  0.002991199493408203
+Vanilla ---> Time Taken =  0.003935098648071289
+
+w,b,eta,max_epoch = -2,-2,1.0,1000
+Momentum --> Time Taken =  0.7487750053405762
+Vanilla ---> Time Taken =  0.8970255851745605
+
+w,b,eta,max_epoch = -2,-2,1.0,100
+Momentum --> Time Taken = 0.039891719818115234
+Vanilla ---> Time Taken = 0.0663306713104248 
+
+w,b,eta,max_epoch = -2,-2,1.0,50
+Momentum --> Time Taken = 0.02493453025817871
+Vanilla ---> Time Taken = 0.03191328048706055
+
+w,b,eta,max_epoch = -2,-2,1.0,75
+Momentum --> Time Taken = 0.04288434982299805
+Vanilla ---> Time Taken = 0.0468754768371582
