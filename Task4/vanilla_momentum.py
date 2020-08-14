@@ -75,3 +75,4 @@ def momentum_gradient_descent():
 
             
 momentum_gradient_descent()
+do_gradient_descent()
