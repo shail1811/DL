@@ -1,1 +1,26 @@
 Nesterov Accelerated Vs Momentum vs Vanilla
+
+w,b,eta,max_epoch = -2,-2,1.0,10
+Momentum --> Time Taken =  0.002991199493408203 Error = 0.41472250827836216
+Vanilla ---> Time Taken =  0.003935098648071289 Error = 0.4156372887753848
+Nesterov --> Time Taken =  0.4156184512173927 Error = 0.4156184512173927
+
+w,b,eta,max_epoch = -2,-2,1.0,1000
+Momentum --> Time Taken =  0.7487750053405762 Error = 0.03475356660973796
+Vanilla ---> Time Taken =  0.8970255851745605 Error = 0.034753566609737725
+Nesterov --> Time Taken =  0.6522538661956787  Error = 0.03475356660973783
+
+w,b,eta,max_epoch = -2,-2,1.0,100
+Momentum --> Time Taken = 0.039891719818115234 Error = 0.03475356660868311
+Vanilla ---> Time Taken = 0.0663306713104248  Error = 0.412582501396922
+Nesterov --> Time Taken = 0.06282949447631836  Error = 0.41178937929919396
+
+w,b,eta,max_epoch = -2,-2,1.0,50
+Momentum --> Time Taken = 0.02493453025817871 Error = 
+Vanilla ---> Time Taken = 0.03191328048706055 Error = 0.4147030719809401
+Nesterov --> Time Taken = 0.0339512825012207  Error = 0.41454203035876835
+
+w,b,eta,max_epoch = -2,-2,1.0,75
+Momentum --> Time Taken = 0.04288434982299805 Error = 0.41385059137656743
+Vanilla ---> Time Taken = 0.0468754768371582 Error = 0.41385059137656743
+Nesterov --> Time Taken = 0.03689932823181152  Error = 0.4134968836789405
